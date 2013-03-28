@@ -20,8 +20,8 @@ A mobile front-end for Bullsfirst Bank, based on jQuery Mobile and PhoneGap.
 
 ## Live Demo
 *	You can download the Android version of the app to your device from [here](http://archfirst.org/sites/default/files/sources/BfBank.apk). Make sure you allow installation of non-Market applications (Menu > Settings > Applications > Unknown sources).
-*	You can view the web version of the app from [here](http://archfirst.org/bullsfirst-bank/)
+*	You can view the web version of the app [here](http://archfirst.org/bullsfirst-bank/).
 
 ## Known Issues
-*	See issues list [here](https://github.com/archfirst/bullsfirst-bank-jqm-phonegap/issues)
+*	See issues list [here](https://github.com/archfirst/bullsfirst-bank-jqm-phonegap/issues).
 
