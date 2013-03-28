@@ -1,0 +1,191 @@
+/* -----------------------------------------------------------------------------
+ * General Styles
+ * -------------------------------------------------------------------------- */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/* -----------------------------------------------------------------------------
+ * jQuery-Mobile overrides
+ * -------------------------------------------------------------------------- */
+/* Style list-item aside to be vertically centered and blue. Example: balances on Accounts screen */
+.ui-li-aside {
+    color: #5e87b0;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 1.1em 0 0 0;
+    width: 35%;
+}
+
+/* Add space between rows in table reflow layout */
+.ui-table-reflow tbody tr td:last-child {
+    margin-bottom: 3em;
+}
+
+/* Don't show low-priority rows in normal display */
+.ui-table-reflow [data-priority="low"] {
+    display: none;
+}
+
+/* -----------------------------------------------------------------------------
+ * Alignment
+ * -------------------------------------------------------------------------- */
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+/* -----------------------------------------------------------------------------
+ * Transaction Table - iScroll Version
+ * -------------------------------------------------------------------------- */
+#transactions-page .ui-content {
+    padding: 0;
+}
+
+.table-header {
+    background-color: #808080;
+    border-spacing: 0;
+    color: #FFFFFF;
+    text-shadow: none;
+    width: 100%;
+}
+
+.table-body {
+    border-spacing: 0;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.table-header th,
+.table-body td {
+    padding: 0 5px;
+}
+
+.table-body td {
+    border-bottom: solid 1px #B2B2B2;
+}
+
+/* Following styles are required by iScroll, otherwise scroller will not work */
+.table-body-wrapper {
+    left: 0;
+    overflow: auto;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Following styles are required by iScroll, otherwise scroller will not work */
+.table-body-scroller {
+    width: 100%;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+@media screen and (max-width: 599px) {
+    /* hide priority2 and priority3 columns */
+    .priority2 { display: none; }
+    .priority3 { display: none; }
+
+    /* Table styles */
+    .table-header th {
+        font-size: 14px;
+        height: 30px;
+    }
+    .table-body td {
+        font-size: 14px;
+        height: 44px;
+    }
+
+    /* Column Widths */
+    .date {
+        width: 26%;
+    }
+
+    .description {
+        width: 50%;
+    }
+
+    .amount {
+        width: 24%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    /* Table styles */
+    /* Table styles */
+    .table-header th {
+        font-size: 14px;
+        height: 30px;
+    }
+    .table-body td {
+        font-size: 14px;
+        height: 44px;
+    }
+
+    /* Column Widths */
+    .date {
+        width: 14%;
+    }
+
+    .description {
+        width: 30%;
+    }
+
+    .type {
+        width: 14%;
+    }
+
+    .status {
+        width: 14%;
+    }
+
+    .amount {
+        width: 14%;
+    }
+
+    .balance {
+        width: 14%;
+    }
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Transaction Table - Reflow Version
+ * -------------------------------------------------------------------------- */
+/* Switch to table display for wider widths */
+@media (min-width: 600px) {
+    /* Show the table header rows and set all cells to display: table-cell */
+    .transactions-table-breakpoint td,
+    .transactions-table-breakpoint th,
+    .transactions-table-breakpoint tbody th,
+    .transactions-table-breakpoint tbody td,
+    .transactions-table-breakpoint thead td,
+    .transactions-table-breakpoint thead th {
+        display: table-cell;
+        white-space: nowrap;
+    }
+
+    /* Hide the labels in each cell */
+    .transactions-table-breakpoint td .ui-table-cell-label,
+    .transactions-table-breakpoint th .ui-table-cell-label {
+        display: none;
+    }
+
+    /* Show low-priority rows in table display */
+    .ui-table-reflow [data-priority="low"] {
+        display: table-cell;
+    }
+
+    /* Right justify numbers in table display */
+    .ui-table th.number, .ui-table td.number {
+        text-align: right;
+    }
+}
