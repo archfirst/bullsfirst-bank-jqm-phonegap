@@ -43,6 +43,7 @@ define(
                 // Fit table whenever the page shows
                 var self = this;
                 $('#transactions-page').on('pageshow', $.proxy(self.fitTable, self));
+                $(window).resize($.proxy(self.fitTable, self));
             },
 
             fitTable: function() {
