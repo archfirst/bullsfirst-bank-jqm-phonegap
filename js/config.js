@@ -30,7 +30,7 @@ var require = {
 
     paths: {
         jquery:                      'vendor/jquery-1.9.1',
-        jquerymobile:                'vendor/jquery.mobile-1.3.0',
+        jquerymobile:                'vendor/jquery.mobile-1.3.2',
         underscore:                  'vendor/underscore-1.4.4',
         backbone:                    'vendor/backbone-1.0.0',
         handlebars:                  'vendor/handlebars-1.0.0.rc.3',

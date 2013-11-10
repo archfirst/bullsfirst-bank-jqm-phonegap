@@ -46,7 +46,7 @@ define(
 
             handleClick: function() {
                 Repository.fetchTransactions(this.model.id);
-                $.mobile.navigate('#transactions-page');
+                $.mobile.changePage('#transactions-page');
             }
         });
     }

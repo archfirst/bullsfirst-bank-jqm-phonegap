@@ -31,7 +31,7 @@ define(
             initialize: function() {
                 this.$el.find('.jsLoginButton').click(function() {
                     Repository.fetchAccounts();
-                    $.mobile.navigate('#accounts-page');
+                    $.mobile.changePage('#accounts-page');
                 });
             }
         });
